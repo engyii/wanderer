@@ -1,0 +1,24 @@
+{
+  "name": "wanderer",
+  "version": "0.0.0",
+  "description": "Drop-in replacement fof Miller Medeiros Hasher using path and html5 history",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:engyii/wanderer.git"
+  },
+  "dependencies": {},
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "~3.0.1",
+    "sinonjs": "~1.10.2",
+    "underscore": "~1.6.0"
+  }
+}
+
