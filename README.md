@@ -2,7 +2,7 @@
 
 version: 0.0.0
 
-Drop-in replacement fof Miller Medeiros [Hasher](http://millermedeiros.github.com/Hasher/) Hasher using full path (instead of #) and html5 history, Meant to be used with [crossroads](http://millermedeiros.github.com/crossroads.js/). Only compatible with evergreen browsers.
+Drop-in replacement fof Miller Medeiros [Hasher](http://millermedeiros.github.com/Hasher/) using full path (instead of # path) and html5 history, Meant to be used with [crossroads](http://millermedeiros.github.com/crossroads.js/) on SPA. Only compatible with evergreen browsers.
 
 
 ## Routes: Using Wanderer with Crossroads.js ##
