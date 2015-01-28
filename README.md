@@ -15,7 +15,7 @@ crossroads.addRoute('lorem/ipsum');
 crossroads.routed.add(console.log, console); //log all routes
 
 //setup wanderer
-function parseURL(newUrl, oldUrl){
+function parseUrl(newUrl, oldUrl){
   crossroads.parse(newUrl);
 }
 wanderer.initialized.add(parseUrl); // parse initial url
