@@ -1,3 +1,13 @@
+/*! wanderer v0.0.0 | (c) 2015 @engy | https://github.com/engyii/wanderer | license MIT */
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['signals'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory(require('signals'));
+  } else {
+    root.wanderer = factory(root.signals);
+  }
+}(this, function(signals) {
 /*global signals:true */
 'use strict';
 
@@ -111,3 +121,6 @@ var wanderer = {
 };
 
 wanderer.initialized.memorize = true;
+
+return wanderer;
+}));

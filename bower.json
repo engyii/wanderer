@@ -16,9 +16,6 @@
     "tests"
   ],
   "devDependencies": {
-    "normalize-css": "~3.0.1",
-    "sinonjs": "~1.10.2",
-    "underscore": "~1.6.0"
   }
 }
 

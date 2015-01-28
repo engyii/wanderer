@@ -1,4 +1,3 @@
-/*global signals:true */
 'use strict';
 
 //--------------------------------------------------------------------------------------
@@ -15,27 +14,27 @@ var wanderer;
 // Private Methods
 //--------------------------------------------------------------------------------------
 
-function _getURL() {
+_getURL = function() {
   var path = window.location.pathname + window.location.search;
   try {
     return wanderer.raw ? path : decodeURIComponent(path);
   } catch (e) {
     return path;
   }
-}
+};
 
-function _registerChange(newUrl) {
-  if (_url !== newUrl) {
-    var oldUrl = _url;
-    _url = newUrl;
-    wanderer.changed.dispatch(newUrl, oldUrl);
-  }
-}
-
-function _checkURL() {
+_checkURL = function() {
   var windowURL = _getURL();
   if (windowURL !== _url) {
     _registerChange(windowURL);
+  }
+};
+
+function _registerChange(newUrl) {
+  if (_url !== newURL) {
+    var oldUrl = _url;
+    _url = newUrl;
+    wanderer.changed.dispatch(newUrl, oldUrl);
   }
 }
 
@@ -58,9 +57,7 @@ var wanderer = {
   },
 
   init: function() {
-    if (_isActive) {
-      return;
-    }
+    if (_isActive) return;
 
     _url = _getURL();
     window.addEventListener('popstate', _checkURL);
@@ -69,9 +66,7 @@ var wanderer = {
   },
 
   stop: function() {
-    if (!_isActive) {
-      return;
-    }
+    if (!_isActive) return;
     window.removeListener('popstate', _checkURL);
     _isActive = false;
     wanderer.stopped.dispatch(_url);
