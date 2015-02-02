@@ -99,6 +99,10 @@ var wanderer = {
     }
   },
 
+  getURL: function() {
+    return _getURL();
+  },
+
   replaceURL: function(path) {
     if (path !== _url) {
       _registerChange(path);
