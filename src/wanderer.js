@@ -10,6 +10,7 @@ var history = window.history;
 var _isActive;
 var _url;
 var wanderer;
+var _oldUrl;
 
 //--------------------------------------------------------------------------------------
 // Private Methods
@@ -26,9 +27,9 @@ function _getURL() {
 
 function _registerChange(newUrl) {
   if (_url !== newUrl) {
-    var oldUrl = _url;
+    _oldUrl = _url;
     _url = newUrl;
-    wanderer.changed.dispatch(newUrl, oldUrl);
+    wanderer.changed.dispatch(newUrl, _oldUrl);
   }
 }
 
@@ -103,6 +104,15 @@ var wanderer = {
         history.replaceState(null, null, path);
       }
     }
+  },
+
+  getUrlArray:function () {
+    return wanderer.getURL().split('/');
+  },
+
+  setUrlArray:function (paths) {
+    var path = paths.join('/');
+    wanderer.setURL(path);
   },
 
   dispose: function() {
