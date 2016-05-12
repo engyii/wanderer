@@ -2,7 +2,9 @@
 
 version: 0.0.0
 
-Some kind of replacement of Miller Medeiros [Hasher](http://millermedeiros.github.com/Hasher/) using full path (instead of hash path) and html5 history, Meant to be used with [crossroads](http://millermedeiros.github.com/crossroads.js/) on [SPA](http://en.wikipedia.org/wiki/Single-page_application) (instead of using the bloated, old, unmaintained [history.js](https://github.com/browserstate/history.js/). Not much useful otherwise, it's just using pushState to update url, listen to popstate and feed back url with events. Only compatible with evergreen browsers.
+A replacement of Miller Medeiros [Hasher](http://millermedeiros.github.com/Hasher/) using full path (instead of hash path) and html5 history, Meant to be used with [crossroads](http://millermedeiros.github.com/crossroads.js/) on [SPA](http://en.wikipedia.org/wiki/Single-page_application) (instead of using the bloated, old, unmaintained [history.js](https://github.com/browserstate/history.js/)). Not much useful otherwise, it's using pushState to update url, listen to popstate and feed back url with events. that's it. 
+
+Only compatible with evergreen browsers.
 
 
 ## Routes: Using Wanderer with Crossroads.js ##
