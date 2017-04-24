@@ -6,6 +6,7 @@
   "author": "@engy",
   "license": "MIT",
   "homepage": "https://github.com/engyii/wanderer",
+  "main": "dist/wanderer.js"
   "dependencies": {
     "bower": "^1.3.9",
     "gulp": "^3.8.6",
