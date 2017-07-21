@@ -1,6 +1,6 @@
 {
   "name": "wanderer",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Drop-in replacement fof Miller Medeiros Hasher using path and html5 history",
   "repository": "git@github.com:engyii/wanderer.git",
   "author": "@engy",
