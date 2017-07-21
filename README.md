@@ -1,8 +1,8 @@
 # wanderer
 
-version: 0.0.0
+version: 0.0.1
 
-A replacement of Miller Medeiros [Hasher](http://millermedeiros.github.com/Hasher/) using full path (instead of hash path) and html5 history, Meant to be used with [crossroads](http://millermedeiros.github.com/crossroads.js/) on [SPA](http://en.wikipedia.org/wiki/Single-page_application) (instead of using the bloated, old, unmaintained [history.js](https://github.com/browserstate/history.js/)). Not much useful otherwise, it's using pushState to update url, listen to popstate and feed back url with events. that's it. 
+A replacement of Miller Medeiros [Hasher](http://millermedeiros.github.com/Hasher/) using full path (instead of hash path) and html5 history, Meant to be used with [crossroads](http://millermedeiros.github.com/crossroads.js/) on [SPA](http://en.wikipedia.org/wiki/Single-page_application) (instead of using the bloated, old, unmaintained [history.js](https://github.com/browserstate/history.js/)). Not much useful otherwise, it's using pushState to update url, listen to popstate and feed back url with events. that's it.
 
 Only compatible with evergreen browsers.
 

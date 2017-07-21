@@ -1,4 +1,4 @@
-/*! wanderer v0.0.0 | (c) 2015 @engy | https://github.com/engyii/wanderer | license MIT */
+/*! wanderer v0.0.0 | (c) 2017 @engy | https://github.com/engyii/wanderer | license MIT */
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     define(['signals'], factory);
@@ -90,13 +90,11 @@ var wanderer = {
 
   setURL: function(path) {
     if (path !== _url) {
-      _registerChange(path);
-      if (path === _url) {
-        if (!wanderer.raw) {
-          path = encodeURI(path); //used encodeURI instead of encodeURIComponent to preserve '?', '/',
-        }
-        history.pushState(null, null, path);
+      if (!wanderer.raw) {
+        path = encodeURI(path); //used encodeURI instead of encodeURIComponent to preserve '?', '/',
       }
+      history.pushState(null, null, path);
+      _registerChange(path);
     }
   },
 
@@ -106,13 +104,11 @@ var wanderer = {
 
   replaceURL: function(path) {
     if (path !== _url) {
-      _registerChange(path);
-      if (path === _url) {
-        if (!wanderer.raw) {
-          path = encodeURI(path); //used encodeURI instead of encodeURIComponent to preserve '?', '/',
-        }
-        history.replaceState(null, null, path);
+      if (!wanderer.raw) {
+        path = encodeURI(path); //used encodeURI instead of encodeURIComponent to preserve '?', '/',
       }
+      history.replaceState(null, null, path);
+      _registerChange(path);
     }
   },
 

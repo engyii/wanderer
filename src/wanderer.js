@@ -80,13 +80,11 @@ var wanderer = {
 
   setURL: function(path) {
     if (path !== _url) {
-      _registerChange(path);
-      if (path === _url) {
-        if (!wanderer.raw) {
-          path = encodeURI(path); //used encodeURI instead of encodeURIComponent to preserve '?', '/',
-        }
-        history.pushState(null, null, path);
+      if (!wanderer.raw) {
+        path = encodeURI(path); //used encodeURI instead of encodeURIComponent to preserve '?', '/',
       }
+      history.pushState(null, null, path);
+      _registerChange(path);
     }
   },
 
@@ -96,13 +94,11 @@ var wanderer = {
 
   replaceURL: function(path) {
     if (path !== _url) {
-      _registerChange(path);
-      if (path === _url) {
-        if (!wanderer.raw) {
-          path = encodeURI(path); //used encodeURI instead of encodeURIComponent to preserve '?', '/',
-        }
-        history.replaceState(null, null, path);
+      if (!wanderer.raw) {
+        path = encodeURI(path); //used encodeURI instead of encodeURIComponent to preserve '?', '/',
       }
+      history.replaceState(null, null, path);
+      _registerChange(path);
     }
   },
 
